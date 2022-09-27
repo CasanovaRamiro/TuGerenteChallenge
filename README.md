@@ -55,3 +55,5 @@ A challenge made for the TuGerente Team.
 #
 ![plot](./src/assets/images/Component-creation-succes.PNG)
 
+## Docker
+- casanovaramiro/tu-gerente-chall:2.0
