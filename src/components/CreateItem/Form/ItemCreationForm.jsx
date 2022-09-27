@@ -9,27 +9,27 @@ import Swal from "sweetalert2";
 function ItemCreationForm({ query, setDisplay }) {
   const firestoreUserRef = collection(db, "users");
   const createSubmit = async (newUser) => {
-    // try{
-    await addDoc(firestoreUserRef, newUser);
-    //   Swal.fire({
-    //   title: 'User Created!',
-    //   text: "the user was successfully created!",
-    //   showCancelButton: false,
-    //   confirmButtonColor: '#3085d6',
-    //   cancelButtonColor: '#d33',
-    //   confirmButtonText: 'Accept'
-    // }).then((result) => {
-    //   if (result.isConfirmed) {
-    //   setDisplay(false)
-    //   }
-    // })
-    // }catch(error){
-    //   Swal.fire({
-    //     icon: 'error',
-    //     title: 'Oops...',
-    //     text: 'Something went wrong!'
-    //   })
-    // }
+    try {
+      await addDoc(firestoreUserRef, newUser);
+      Swal.fire({
+        title: 'User Created!',
+        text: "the user was successfully created!",
+        showCancelButton: false,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Accept'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          setDisplay(false)
+        }
+      })
+    } catch (error) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Something went wrong!'
+      })
+    }
   };
   return (
     <Formik
@@ -107,14 +107,5 @@ function ItemCreationForm({ query, setDisplay }) {
     </Formik>
   );
 }
-/**
- * {
-    "name": "Raul",
-    "socialReason": "hola",
-    "nit": "niiit",
-    "phone": 1233123,
-    "code": "dsf3dg5245d"
-  }
- */
 
 export default ItemCreationForm;
