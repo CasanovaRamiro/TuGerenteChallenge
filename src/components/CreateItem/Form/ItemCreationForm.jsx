@@ -48,8 +48,8 @@ function ItemCreationForm({ query, setDisplay }) {
       {({ errors }) => (
         <Form className={css.formContainer}>
           <div className={css.inputContainer}>
-            <label htmlFor="name">Name</label>
-            <Field type="text" id="name" name="name" placeholder="name" />
+            <label htmlFor="name">Nombre</label>
+            <Field type="text" id="name" name="name" placeholder="Nombre..." />
             <ErrorMessage
               name="name"
               component={() => <div className={css.error}>{errors.name}</div>}
@@ -57,12 +57,12 @@ function ItemCreationForm({ query, setDisplay }) {
           </div>
 
           <div className={css.inputContainer}>
-            <label htmlFor="socialReason">socialReason</label>
+            <label htmlFor="socialReason">Razón Social</label>
             <Field
               type="text"
               id="socialReason"
               name="socialReason"
-              placeholder="socialReason"
+              placeholder="Razón Social..."
             />
             <ErrorMessage
               name="socialReason"
@@ -73,8 +73,8 @@ function ItemCreationForm({ query, setDisplay }) {
           </div>
 
           <div className={css.inputContainer}>
-            <label htmlFor="nit">Image</label>
-            <Field type="number" id="nit" name="nit" placeholder="nit" />
+            <label htmlFor="nit">N.I.T.</label>
+            <Field type="number" id="nit" name="nit" placeholder="NIT..." />
             <ErrorMessage
               name="nit"
               component={() => <div className={css.error}>{errors.nit}</div>}
@@ -82,16 +82,16 @@ function ItemCreationForm({ query, setDisplay }) {
           </div>
 
           <div className={css.inputContainer}>
-            <label htmlFor="phone">phone</label>
-            <Field type="number" id="phone" name="phone" placeholder="phone" />
+            <label htmlFor="phone">Teléfono</label>
+            <Field type="number" id="phone" name="phone" placeholder="Teléfono..." />
             <ErrorMessage
               name="phone"
               component={() => <div className={css.error}>{errors.phone}</div>}
             />
           </div>
           <div className={css.inputContainer}>
-            <label htmlFor="code">code</label>
-            <Field type="text" id="code" name="code" placeholder="code" />
+            <label htmlFor="code">Código</label>
+            <Field type="text" id="code" name="code" placeholder="Código..." />
             <ErrorMessage
               name="code"
               component={() => <div className={css.error}>{errors.code}</div>}
@@ -99,7 +99,7 @@ function ItemCreationForm({ query, setDisplay }) {
           </div>
           <div className={css.inputContainer}>
             <button className={css.submit} type="submit">
-              Submit
+              Crear Usuario
             </button>
           </div>
         </Form>

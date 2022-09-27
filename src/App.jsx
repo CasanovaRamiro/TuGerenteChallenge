@@ -8,7 +8,7 @@ import { db } from "./firebase-config";
 
 function App() {
   const [display, setDisplay] = useState(false);
-  const [pageNumber, setPageNumber] = useState(10);
+  const [pageNumber, setPageNumber] = useState(20);
   const [users, setUsers] = useState([]);
   const [list, setList] = useState(users);
 
@@ -26,8 +26,8 @@ function App() {
   console.log(users);
   //Modifies page number that will reflect on the number of items displayed
   const handlePagination = () => {
-    if (pageNumber + 5 < list.length) {
-      setPageNumber(pageNumber + 5);
+    if (pageNumber + 20 < list.length) {
+      setPageNumber(pageNumber + 20);
     } else if (pageNumber > list.length || pageNumber + 5 > list.length) {
       setPageNumber(list.length);
     }
@@ -76,7 +76,7 @@ function App() {
         className="container"
         onClick={() => {
           setDisplay(!display);
-          setPageNumber(10);
+          setPageNumber(20);
         }}
       >
         <span>Drop Down Menu</span>
