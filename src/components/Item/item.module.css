@@ -1,0 +1,9 @@
+.container {
+  border: 1px solid gray;
+  margin: 4px 0px;
+  padding: 2px 4px;
+  transition: 0.2s;
+}
+.container:hover {
+  transform: scale(1.02);
+}
